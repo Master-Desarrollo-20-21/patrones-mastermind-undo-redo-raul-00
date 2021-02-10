@@ -38,9 +38,9 @@ public class Game {
 	public boolean isLooser() {
 		return this.attempts == Game.MAX_LONG;
 	}
-	
+
 	public boolean isWinner() {
-		return this.results.get(this.attempts-1).isWinner();
+		return this.results.get(this.attempts - 1).isWinner();
 	}
 
 	public int getAttempts() {
@@ -63,4 +63,13 @@ public class Game {
 		return Combination.getWidth();
 	}
 
+	public GameMemento getMemento() {
+		return new GameMemento(proposedCombinations, results);
+	}
+
+	public void setMemento(GameMemento memento) {
+		this.proposedCombinations = memento.getProposedCombinations();
+		this.attempts = this.proposedCombinations.size();
+		this.results = memento.getResults();
+	}
 }
