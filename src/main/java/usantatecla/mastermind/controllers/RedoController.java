@@ -8,11 +8,6 @@ public class RedoController extends Controller {
         super(session);
     }
 
-    @Override
-    public void accept(ControllersVisitor controllersVisitor) {
-
-    }
-
     public boolean isRedoable() {
         return this.session.isRedoable();
     }
@@ -20,5 +15,4 @@ public class RedoController extends Controller {
     public void redo() {
         this.session.redo();
     }
-
 }

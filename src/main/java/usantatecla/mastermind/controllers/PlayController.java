@@ -6,7 +6,7 @@ import usantatecla.mastermind.models.Session;
 import usantatecla.mastermind.types.Color;
 import usantatecla.mastermind.types.Error;
 
-public class PlayController extends Controller {
+public class PlayController extends Controller implements AcceptorController {
 
     private ProposalController proposalController;
     private UndoController undoController;
@@ -68,8 +68,7 @@ public class PlayController extends Controller {
     }
 
     @Override
-    public void accept(ControllersVisitor controllersVisitor) {
-        controllersVisitor.visit(this);
+    public void accept(ControllerVisitor controllerVisitor) {
+        controllerVisitor.visit(this);
     }
-
 }

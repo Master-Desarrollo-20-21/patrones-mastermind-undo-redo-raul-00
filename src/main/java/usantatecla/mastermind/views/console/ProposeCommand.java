@@ -11,7 +11,7 @@ class ProposeCommand extends Command {
 
     @Override
     protected void execute() {
-        new ProposalView().interact(this.playController.getProposalController());
+        new ProposalView().interact(this.playController);
     }
 
     @Override

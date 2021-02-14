@@ -1,14 +1,13 @@
 package usantatecla.mastermind;
 
-import usantatecla.mastermind.views.View;
-import usantatecla.mastermind.views.graphics.GraphicsView;
+import usantatecla.mastermind.views.graphics.View;
 
-public class GraphicsMastermind extends Mastermind{
+public class GraphicsMastermind extends Mastermind {
 
 	protected View createView() {
-		return new GraphicsView();
+		return new View();
 	}
-	
+
 	public static void main(String[] args) {
 		new GraphicsMastermind().play();
 	}

@@ -13,7 +13,4 @@ public abstract class Controller {
 	public int getWidth() {
 		return this.session.getWidth();
 	}
-
-	public abstract void accept(ControllersVisitor controllersVisitor);
-
 }

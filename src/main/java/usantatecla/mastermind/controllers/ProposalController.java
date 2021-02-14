@@ -62,10 +62,4 @@ public class ProposalController extends Controller {
 	public int getWhites(int position) {
 		return this.session.getWhites(position);
 	}
-
-	@Override
-	public void accept(ControllersVisitor controllersVisitor) {
-		controllersVisitor.visit(this);
-	}
-
 }

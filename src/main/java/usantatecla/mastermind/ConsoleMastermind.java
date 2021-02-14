@@ -1,14 +1,13 @@
 package usantatecla.mastermind;
 
-import usantatecla.mastermind.views.View;
-import usantatecla.mastermind.views.console.ConsoleView;
+import usantatecla.mastermind.views.console.View;
 
-public class ConsoleMastermind extends Mastermind{
+public class ConsoleMastermind extends Mastermind {
 
 	protected View createView() {
-		return new ConsoleView();
+		return new View();
 	}
-	
+
 	public static void main(String[] args) {
 		new ConsoleMastermind().play();
 	}

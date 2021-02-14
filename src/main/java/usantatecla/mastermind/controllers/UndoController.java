@@ -8,11 +8,6 @@ public class UndoController extends Controller {
         super(session);
     }
 
-    @Override
-    public void accept(ControllersVisitor controllersVisitor) {
-
-    }
-
     public boolean isUndoable() {
         return this.session.isUndoable();
     }
@@ -20,5 +15,4 @@ public class UndoController extends Controller {
     public void undo() {
         this.session.undo();
     }
-
 }
